@@ -1,5 +1,5 @@
 [package]
-name = "analog"
+name = "inlog"
 version = "0.1.0"
 edition = "2021"
 authors = [ "Ben McAvoy <ben.mcavoy@tutanota.com>" ]
