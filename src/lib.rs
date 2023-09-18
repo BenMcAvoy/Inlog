@@ -1,13 +1,11 @@
-use log::{SetLoggerError, LevelFilter};
-use log::{Record, Level, Metadata};
+mod colours;
+use log::{Level, LevelFilter, Metadata, Record};
 
 use crate::colours::colour_format;
 
-mod colours;
+struct Analog;
 
-struct SimpleLogger;
-
-impl log::Log for SimpleLogger {
+impl log::Log for Analog {
     fn enabled(&self, metadata: &Metadata) -> bool {
         log::set_max_level(LevelFilter::Trace);
         metadata.level() <= Level::Trace
@@ -29,13 +27,17 @@ impl log::Log for SimpleLogger {
             Level::Error => colours::RED,
         };
 
-        println!("{} {}", colour_format(colour, &format!("[ {:5} ]", level)), record.args());
+        println!(
+            "{} {}",
+            colour_format(colour, &format!("[ {:5} ]", level)),
+            record.args()
+        );
     }
 
     fn flush(&self) {}
 }
 
-static LOGGER: SimpleLogger = SimpleLogger;
+static LOGGER: Analog = Analog;
 
 pub fn init(filter: LevelFilter) {
     log::set_logger(&LOGGER)
