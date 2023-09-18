@@ -5,6 +5,6 @@ pub const GREEN: &str = "\x1b[32m";
 pub const NORMAL: &str = "\x1b[0m";
 pub const LIGHT_BLUE: &str = "\x1b[94m";
 
-pub fn colour(colour: &str, string: &str) -> String {
+pub fn colour_format(colour: &str, string: &str) -> String {
     format!("{colour}{string}{NORMAL}")
 }
