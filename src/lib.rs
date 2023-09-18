@@ -1,6 +1,6 @@
 mod colours;
-use log::{Level, LevelFilter, Metadata, Record};
 
+use log::{Level, LevelFilter, Metadata, Record};
 use crate::colours::colour_format;
 
 struct Analog;
