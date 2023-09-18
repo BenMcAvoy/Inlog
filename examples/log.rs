@@ -1,5 +1,5 @@
 fn main() {
-    analog::init().expect("Failed to start logger");
+    analog::init(log::LevelFilter::Info);
 
     log::info!("Hello, world!");
 }
