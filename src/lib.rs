@@ -7,8 +7,8 @@ struct Analog;
 
 impl log::Log for Analog {
     fn enabled(&self, metadata: &Metadata) -> bool {
-        log::set_max_level(LevelFilter::Trace);
-        metadata.level() <= Level::Trace
+        log::set_max_level(LevelFilter::Debug);
+        metadata.level() <= Level::Debug
     }
 
     fn log(&self, record: &Record) {

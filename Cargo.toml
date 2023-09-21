@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2021"
 authors = [ "Ben McAvoy <ben.mcavoy@tutanota.com>" ]
 license = "MIT"
-homepage = "https://github.com/BenMcAvoy/Analog"
-repository = "https://github.com/BenMcAvoy/Analog"
+homepage = "https://github.com/BenMcAvoy/Inlog"
+repository = "https://github.com/BenMcAvoy/Inlog"
 description = "An incremental logger with only log as a dependency."
 
 [dependencies]
